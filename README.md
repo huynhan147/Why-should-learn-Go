@@ -2,7 +2,7 @@
 [Source](https://medium.com/exploring-code/why-should-you-learn-go-f607681fad65 "Permalink to Why should you learn Go? – Exploring Code – Medium")
 
 # Tại sao bạn nên học Go?
-Trong vài năm qua, có một sự tăng trưởng của ngôn ngữ lập trình mới: Go hoặc GoLang. Không có gì làm cho developer trở nên điên rồ hơn một ngôn ngữ lập trình mới, đúng không? Vì vậy, tôi bắt đầu học Go trước 4 đến 5 tháng và ở đây tôi sẽ cho bạn biết lý do tại sao bạn cũng nên học ngôn ngữ mới này.
+Trong vài năm qua,1 ngôn ngữ lập trình mới đang nổi lên: Go hoặc GoLang. Không có gì làm cho developer trở nên điên rồ hơn một ngôn ngữ lập trình mới, đúng không? Vì vậy, tôi bắt đầu học Go trước 4 đến 5 tháng và ở đây tôi sẽ cho bạn biết lý do tại sao bạn cũng nên học ngôn ngữ mới này.
 
 Tôi sẽ không dạy bạn, cách bạn có thể viết “Hello World !!” trong bài viết này. Có rất nhiều bài báo online cho điều đó. Tôi sẽ giải thích giai đoạn hiện tại của phần mềm máy tính và tại sao chúng ta cần ngôn ngữ mới như Go? Bởi vì nếu không có vấn đề gì thì chúng ta không cần giải pháp, đúng không?
 ### **Giới hạn về phần cứng:**
@@ -24,11 +24,11 @@ Vì vậy, nếu chúng ta không thể dựa vào những cải tiến phần c
 
 Như chúng ta đã thảo luận ở trên, các nhà sản xuất phần cứng đang thêm nhiều nhân hơn vào các bộ vi xử lý để tăng hiệu năng. Tất cả các trung tâm dữ liệu đang chạy trên các bộ vi xử lý đó và chúng ta sẽ mong đợi sự gia tăng về số nhân trong những năm sắp tới. Thêm vào đó, các ứng dụng ngày nay sử dụng nhiều micro-services để duy trì kết nối cơ sở dữ liệu, message queues và lưu trữ cache. Vì vậy, phần mềm chúng tôi phát triển và các ngôn ngữ lập trình nên hỗ trợ đồng thời một cách dễ dàng và chúng phải có khả năng mở rộng với số lượng nhân tăng lên.
 
-Tuy nhiên, hầu hết các ngôn ngữ lập trình hiện đại (như Java, Python, vv) là từ môi trường luồng đơn 90 '. Hầu hết các ngôn ngữ lập trình đều hỗ trợ đa luồng. Nhưng vấn đề thực sự đi kèm với việc thực hiện đồng thời,threading-locking,, race conditions và deadlocks. **Những điều này làm cho việc tạo một ứng dụng đa luồng trên các ngôn ngữ đó trở nên khó khăn.**
+Tuy nhiên, hầu hết các ngôn ngữ lập trình hiện đại (như Java, Python, vv) là từ môi trường đơn luồng nhưng năm 90 '. Hầu hết các ngôn ngữ lập trình đều hỗ trợ đa luồng. Nhưng vấn đề thực sự đi kèm với việc thực hiện đồng thời,threading-locking,, race conditions và deadlocks. **Những điều này làm cho việc tạo một ứng dụng đa luồng trên các ngôn ngữ đó trở nên khó khăn.**
 
 Ví dụ, tạo một luồng mới trong Java thực sự không hiệu quả về bộ nhớ. Vì mỗi luồng tiêu tốn khoảng 1MB kích thước bộ nhớ heap và cuối cùng nếu bạn bắt đầu chạy hàng nghìn luồng, chúng sẽ gây áp lực rất lớn trên heap và sẽ gây ra shut down do tràn bộ nhớ. Ngoài ra, nếu bạn muốn giao tiếp giữa hai hoặc nhiều luồng, thì sẽ rất khó khăn.
 
-Mặt khác, Go được phát hành vào năm 2009 khi bộ vi xử lý đa nhân đã có sẵn. Đó là lý do tại sao Go được xây dựng với việc lưu giữ đồng thời trong tâm trí. Go có goroutines thay vì threads. Chúng tiêu tốn gần 2KB bộ nhớ từ heap. Vì vậy, bạn có thể chạy hàng triệu goroutines bất cứ lúc nào.
+Mặt khác, Go được phát hành vào năm 2009 khi bộ vi xử lý đa nhân đã có sẵn. Đó là lý do tại sao Go được xây dựng gắn liền với concurrency. Go có goroutines thay vì threads. Chúng tiêu tốn gần 2KB bộ nhớ từ heap. Vì vậy, bạn có thể chạy hàng triệu goroutines bất cứ lúc nào.
 
 ![][1]
 
@@ -48,7 +48,7 @@ Tất cả các điểm trên, làm cho Go rất mạnh mẽ để xử lý đ�
 
 ![][3]
 
-Go làm tốt cả hai thế giới. Dễ dàng viết đồng thời và hiệu quả để quản lý đồng thời
+Go có những điều tốt nhất của cả 2 cái trên. Dễ dàng viết đồng thời và hiệu quả để quản lý đồng thời
 
 ### **Chạy trực tiếp trên nển tảng phần cứng.**
 
